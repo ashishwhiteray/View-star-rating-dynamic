@@ -1,0 +1,70 @@
+__________________________________HTML___________________________________________
+<div class="star-rating">
+    <span style="width: 50%"></span>
+</div>
+
+
+__________________________________CSS______________________________________
+
+.height-box {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+}
+.full-height {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-flow: column;
+flex-flow: column;
+}
+.full-height > * {
+-webkit-box-flex: 1;
+-ms-flex: 1;
+flex: 1;
+width: 100%;
+}
+.star-rating {
+overflow: hidden;
+position: relative;
+display: block;
+height: 1em;
+line-height: 1;
+font-size: 1.5em;
+width: 115.5px;
+font-family: 'star';
+font-weight: 400;
+word-break: keep-all;
+margin-bottom: 5px;
+}
+.star-rating:before {
+content: "\f006\f006\f006\f006\f006";
+font-family: FontAwesome;
+letter-spacing: 0.313em;
+opacity: .25;
+float: left;
+top: 0;
+left: 0;
+position: absolute;
+color: #2c2d33;
+}
+.star-rating span {
+overflow: hidden;
+float: left;
+top: 0;
+left: 0;
+position: absolute;
+padding-top: 1.5em;
+}
+.star-rating span:before {
+content: "\f005\f005\f005\f005\f005";
+font-family: FontAwesome;
+letter-spacing: 0.313em;
+top: 0;
+position: absolute;
+left: 0;
+color: #fd6602;
+}
